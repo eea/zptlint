@@ -1,0 +1,60 @@
+
+Changelog for zptlint
+=====================
+
+
+0.2.5 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+0.2.4 (2010-12-26)
+------------------
+
+- Fix url in setup.py 
+  [gotcha]
+
+
+0.2.3 (2009-12-18)
+------------------
+
+- Documentation fixes (suggested by Davide Moro)
+  [gotcha]
+
+
+0.2.2 (2009-12-18)
+------------------
+
+- Testing multiple files was broken (reported by Wouter Vanden Hove)
+  [gotcha]
+
+
+0.2.1 (2009-12-18)
+------------------
+
+- Remove RestrictedPython from dependencies
+  [gotcha]
+
+
+0.2 (2009-12-18)
+----------------
+
+- Add provider expression support
+  [gotcha]
+
+
+0.1 (2009-12-17)
+----------------
+
+- Proper source release
+  [gotcha]
+
+0.1a (2008-06-16)
+-----------------
+    
+- First release to PyPI
+  [gotcha]
+
+- Initial code
+  [ree]
