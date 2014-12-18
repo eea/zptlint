@@ -6,13 +6,14 @@ Changelog for zptlint
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Chameleon support if *five.pt* is present.
+  [avoinea]
 
 
 0.2.4 (2010-12-26)
 ------------------
 
-- Fix url in setup.py 
+- Fix url in setup.py
   [gotcha]
 
 
@@ -52,7 +53,7 @@ Changelog for zptlint
 
 0.1a (2008-06-16)
 -----------------
-    
+
 - First release to PyPI
   [gotcha]
 

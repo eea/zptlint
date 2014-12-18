@@ -2,8 +2,17 @@ import sys
 
 from zope.tales.engine import Engine
 from zope.pagetemplate.pagetemplate import PageTemplate
-
 from zope.contentprovider.tales import TALESProviderExpression
+
+# Chameleon support
+try:
+    from five.pt.engine import Program
+except Exception:
+    # Nothing to do
+    pass
+else:
+    from zope.component import getGlobalSiteManager
+    getGlobalSiteManager().registerUtility(Program)
 
 
 def run():
