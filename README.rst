@@ -1,7 +1,7 @@
 zptlint
 =======
 
-Script that runs the pagetemplate parser and output errors
+Script that runs the Zope Page Templates parser and outputs errors.
 
 Installation
 ============
@@ -27,6 +27,13 @@ Configuration in .vimrc
 
   "page templates configuration
   autocmd BufNewFile,BufRead *.pt,*.cpt,*.zpt setfiletype zpt
+
+`zptlint` integrates with 
+`Syntastic <https://github.com/scrooloose/syntastic>`_
+so if you use that, the following is already handled. 
+
+If not, you may continue::
+
   autocmd FileType zpt set makeprg=zptlint\ %
   autocmd FileType zpt set errorformat=%+P***\ Error\ in:\ %f,%Z%*\\s\\,\ at\ line\ %l\\,\ column\ %c,%E%*\\s%m,%-Q
 
@@ -35,7 +42,6 @@ Configuration in .vimrc
     au BufWritePost,FileWritePost *.cpt make
     au BufWritePost,FileWritePost *.zpt make
   augroup END
-
 
 Because zpt is defined as a new file type, 
 you may want to copy `syntax/html.vim` to `syntax/zpt.vim` 
