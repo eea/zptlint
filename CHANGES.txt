@@ -6,6 +6,9 @@ Changelog for zptlint
 0.2.5 (unreleased)
 ------------------
 
+- Fix exit code on errors
+  [avoinea]
+
 - Chameleon support if *five.pt* is present.
   [avoinea]
 
