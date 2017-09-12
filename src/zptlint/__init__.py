@@ -19,10 +19,15 @@ def run():
     if len(sys.argv) < 2:
         print "zptlint file [files...]"
         sys.exit(1)
-    else:
-        registerTALESExpressionType('provider', TALESProviderExpression)
-        for arg in sys.argv[1:]:
-            test(arg)
+
+    errors = False
+    registerTALESExpressionType('provider', TALESProviderExpression)
+    for arg in sys.argv[1:]:
+        if not test(arg):
+            errors = True
+
+    if errors:
+        sys.exit(1)
 
 
 def registerTALESExpressionType(name, handler):
@@ -46,3 +51,5 @@ def test(file):
             print '    ', formatted
             print '    ', formatted2
         print
+        return False
+    return True
