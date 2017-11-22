@@ -3,8 +3,8 @@ Changelog for zptlint
 =====================
 
 
-0.2.5 (unreleased)
-------------------
+0.2.5rc1 (2017-11-22)
+---------------------
 
 - Fix exit code on errors
   [avoinea]
