@@ -37,6 +37,7 @@ def registerTALESExpressionType(name, handler):
 def test(file):
     raw_data = open(file, 'r').read()
     pt = PageTemplate()
+    pt.pt_source_file = lambda: file
     pt.write(raw_data)
     if pt._v_errors:
         print "*** Error in:", file

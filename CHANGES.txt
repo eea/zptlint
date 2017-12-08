@@ -9,6 +9,9 @@ Changelog for zptlint
 - Fix exit code on errors
   [avoinea]
 
+- Fix to work with Chameleon 3.0+
+  [avoinea]
+
 - Chameleon support if *five.pt* is present.
   [avoinea]
 
