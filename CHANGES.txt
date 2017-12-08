@@ -2,14 +2,17 @@
 Changelog for zptlint
 =====================
 
+0.2.5rc2 (2017-12-08)
+---------------------
+
+- Fix to work with Chameleon 3.0+
+  [avoinea]
+
 
 0.2.5rc1 (2017-11-22)
 ---------------------
 
 - Fix exit code on errors
-  [avoinea]
-
-- Fix to work with Chameleon 3.0+
   [avoinea]
 
 - Chameleon support if *five.pt* is present.
