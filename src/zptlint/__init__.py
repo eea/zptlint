@@ -12,16 +12,17 @@ except Exception:
     pass
 else:
     from zope.component import getGlobalSiteManager
+
     getGlobalSiteManager().registerUtility(Program)
 
 
 def run():
     if len(sys.argv) < 2:
-        print "zptlint file [files...]"
+        print("zptlint file [files...]")
         sys.exit(1)
 
     errors = False
-    registerTALESExpressionType('provider', TALESProviderExpression)
+    registerTALESExpressionType("provider", TALESProviderExpression)
     for arg in sys.argv[1:]:
         if not test(arg):
             errors = True
@@ -35,22 +36,21 @@ def registerTALESExpressionType(name, handler):
 
 
 def test(file):
-    raw_data = open(file, 'r').read()
+    raw_data = open(file, "r").read()
     pt = PageTemplate()
     pt.pt_source_file = lambda: file
     pt.write(raw_data)
     if pt._v_errors:
-        print "*** Error in:", file
+        print("*** Error in:", file)
         for error in pt._v_errors[1:]:
-            formatted = error.replace('\n', ' ')
-            linepos = formatted.rfind(', at line')
+            formatted = error.replace("\n", " ")
+            linepos = formatted.rfind(", at line")
             if linepos != -1:
-                formatted, formatted2 = (
-                    formatted[:linepos], formatted[linepos:])
+                formatted, formatted2 = (formatted[:linepos], formatted[linepos:])
             else:
-                formatted2 = ''
-            print '    ', formatted
-            print '    ', formatted2
-        print
+                formatted2 = ""
+            print("    ", formatted)
+            print("    ", formatted2)
+        print()
         return False
     return True
