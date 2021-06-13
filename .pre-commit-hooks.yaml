@@ -1,0 +1,7 @@
+-   id: zptlint
+    name: zptlint
+    description: '`zptlint` is a command-line utility for enforcing style consistency across ZPT.'
+    entry: zptlint
+    language: python
+    files: '^.*\.z?pt$'
+    require_serial: true
