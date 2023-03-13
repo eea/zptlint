@@ -36,7 +36,8 @@ def registerTALESExpressionType(name, handler):
 
 
 def test(file):
-    raw_data = open(file, "r").read()
+    with open(file, "r") as file_handle:
+        raw_data = file_handle.read()
     pt = PageTemplate()
     pt.pt_source_file = lambda: file
     pt.write(raw_data)
